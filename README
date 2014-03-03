@@ -1,1 +1,3 @@
-Using the XMLRPC-c in C to create mutual remote procedure call between two hosts, transfering structure data with string and int.
+1. Using the XMLRPC-c in C to create mutual remote procedure call between two hosts 
+2. Simple data struct transfering protocol with string and int.
+3. Run abyss server on another interruptable thread to execute requests from other servers
