@@ -47,6 +47,17 @@ int main(int argc, char ** argv) {
 	printf("program exits!\n");
       }else if(!strcmp(buf, "lookup")){
 	printf("lookup cmd\n");
+      }else if(!strcmp(buf, "locallookup")){
+	node_t * result = xmlrpc_client_callmethod("http://localhost:8080/RPC2", "std.getblock", 100);
+
+	unsigned int i;
+	for(i = 0; i < 3; i++){
+	  printf("Server says data ID is %d\n", result[i].ID);
+	  printf("Server says data IP is %s\n", result[i].IP);
+	  printf("Server says data PORT is %d\n", result[i].PORT);
+	  printf("Server says data DATA is %d\n", result[i].DATA);
+	}
+
       }else if(!strcmp(buf, "delete")){
 	printf("delete cmd\n");
       }else{
